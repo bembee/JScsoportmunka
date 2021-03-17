@@ -7,6 +7,7 @@ function dolgozz() {
     feltolt(adat);
     osszegzes();
     visszafele();
+    otteloszthato();
 }
 function feltolt(db) {
     tomb = [];
@@ -22,10 +23,10 @@ function visszafele() {
     tombvissza = [];
     var index = 0;
     for (var i = 0; i <= tomb.length; i++) {
-        tombvissza[index-1] = tomb[tomb.length-i];
+        tombvissza[index - 1] = tomb[tomb.length - i];
         index++;
     }
-    document.getElementById("vissza").innerHTML = "visszafelé: " + tombvissza.join("; ");
+    document.getElementById("vissza").innerHTML = "Visszafelé: " + tombvissza.join("; ");
 
 }
 
@@ -34,7 +35,7 @@ function osszegzes() {
     for (var i = 0; i < tomb.length; i++) {
         osszeg += tomb[i];
     }
-    document.getElementById("osszeg").innerHTML = "Az elemek összege: " + osszeg;
+    document.getElementById("osszeg").innerHTML = "Az összeg: " + osszeg;
     paros();
 }
 function paros() {
@@ -47,6 +48,16 @@ function paros() {
         }
     }
     document.getElementById("paros").innerHTML = "Párosak: " + parosTomb.join(", ");
+}
+function otteloszthato() {
+    var oszthato = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 5 === 0) {
+            oszthato++;
+        }
+    }
+    document.getElementById("oszthato").innerHTML = "5-el osztható: " + oszthato;
+
 }
 function init() {
     console.log("Itt vagyok!");
