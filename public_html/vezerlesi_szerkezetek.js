@@ -66,3 +66,21 @@ function init() {
 }
 
 window.addEventListener("load", init);
+
+
+
+
+
+
+function hanydb() {
+var hanypirszam = [ 5, 1, 7, 1187];
+var darab = 0;
+    for (var i = 0; i < hanyprimszam.length; i++) {
+        if(hanypirszam[i] / hanypirszam[i]){
+            darab++;
+        }
+        if(hanypirszam[i] / 1){
+            darab++;
+        }  
+    }
+    document.write(darab);
