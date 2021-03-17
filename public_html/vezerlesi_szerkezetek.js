@@ -1,5 +1,6 @@
 var tomb = [];
 var tombvissza = [];
+var parosTomb = [];
 
 function dolgozz() {
     var adat = document.getElementById("adat").value;
@@ -34,8 +35,19 @@ function osszegzes() {
         osszeg += tomb[i];
     }
     document.getElementById("osszeg").innerHTML = "Az elemek összege: " + osszeg;
+    paros();
 }
-
+function paros() {
+    parosTomb = [];
+    var index = 0;
+    for (var i = 0; i < tomb.length; i++) {
+        if (tomb[i] % 2 === 0) {
+            parosTomb[index] = tomb[i];
+            index++;
+        }
+    }
+    document.getElementById("paros").innerHTML = "Párosak: " + parosTomb.join(", ");
+}
 function init() {
     console.log("Itt vagyok!");
     document.getElementById("szoveg").innerHTML = "Helló! A JS DOLGOZIK";
