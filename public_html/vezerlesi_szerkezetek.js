@@ -8,6 +8,7 @@ function dolgozz() {
     osszegzes();
     visszafele();
     otteloszthato();
+    //hanydb();
 }
 function feltolt(db) {
     tomb = [];
@@ -67,20 +68,16 @@ function init() {
 
 window.addEventListener("load", init);
 
-
-
-
-
-
 function hanydb() {
-var hanypirszam = [ 5, 1, 7, 1187];
-var darab = 0;
+    var hanypirszam = [5, 1, 7, 1187];
+    var darab = 0;
     for (var i = 0; i < hanyprimszam.length; i++) {
-        if(hanypirszam[i] / hanypirszam[i]){
+        if (hanypirszam[i] / hanypirszam[i]) {
             darab++;
         }
-        if(hanypirszam[i] / 1){
+        if (hanypirszam[i] / 1) {
             darab++;
-        }  
+        }
+        document.getElementById("primszam").addEventListener("click", dolgozz);
     }
-    document.write(darab);
+}
