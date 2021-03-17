@@ -1,9 +1,11 @@
 var tomb = [];
+var tombvissza = [];
 
 function dolgozz() {
     var adat = document.getElementById("adat").value;
     feltolt(adat);
     osszegzes();
+    visszafele();
 }
 function feltolt(db) {
     tomb = [];
@@ -13,6 +15,16 @@ function feltolt(db) {
     }
     console.log(tomb);
     document.getElementById("szoveg").innerHTML = "A tömb elemei: " + tomb.join("; ");
+}
+
+function visszafele() {
+    tombvissza = [];
+    var index = 0;
+    for (var i = 0; i <= tomb.length; i++) {
+        tombvissza[index-1] = tomb[tomb.length-i];
+        index++;
+    }
+    document.getElementById("vissza").innerHTML = "visszafelé: " + tombvissza.join("; ");
 
 }
 
